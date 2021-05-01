@@ -6,15 +6,16 @@ import Timer from "../components/Timer.jsx"
 import events from "../../events.js"
 import "../components/Container.css"
 
-let ev = events
-
-ev = ev.sort((e1, e2) => (e1.date - e2.date))
-ev = ev.map((element, index) => ({...element, id: index, done: false}))
-
 class App extends React.Component {
 
     constructor(props) {
         super(props)
+
+        let ev = events
+        
+        ev = ev.sort((e1, e2) => (e1.date - e2.date))
+        ev = ev.map((element, index) => ({...element, id: index, done: false}))
+        
         this.state = {
             e: [...ev]
         }

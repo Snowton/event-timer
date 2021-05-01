@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "create-performance-task",
+    title: "Event Timer",
   },
   plugins: ["gatsby-plugin-gatsby-cloud"],
 };

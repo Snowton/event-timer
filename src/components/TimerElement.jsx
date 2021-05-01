@@ -16,37 +16,37 @@ class TimerElement extends React.Component {
 
         if(type === "past") {
             return (
-            <><h4>{name}</h4>
+            <div className="timer past"><h2>{name}</h2>
             <p>{dateString}</p>
-            </>
+            </div>
             )
         }
         const {seconds} = this.props
-        const sec = seconds % 60
-        const min = Math.floor(seconds / 60) % 60
+        const sec = ("0" + seconds % 60).slice(-2)
+        const min = ("0" + Math.floor(seconds / 60) % 60).slice(-2)
         const hour = Math.floor(seconds / 3600) % 24
-        const day = Math.floor(seconds / (3600 * 24))
+        let day = Math.floor(seconds / (3600 * 24))
+        day = day > 0 ? day + (day > 1 ? " days" : " day") : ""
+        const timestring = `Time left: ${day} ${hour}:${min}:${sec}`
 
         if(type === "future") {
     
             return (
-                <>
+                <div className="timer future">
                 <h2>{name}</h2>
-                <p>{day} days
-                {" " + hour}:{min}:{sec}</p>
+                <p>{timestring}</p>
                 <p>{dateString}</p>
-                </>
+                </div>
             )
         }
         if(type === "current") {
     
             return (
-                <>
-                <h1>{name}</h1>
-                <p>{day} days
-                {" " + hour}:{min}:{sec}</p>
+                <div className="timer current">
+                <h1>{`Next: ${name}`}</h1>
+                <p>{timestring}</p>
                 <p>{dateString}</p>
-                </>
+                </div>
             )
         }
     }

@@ -29,9 +29,9 @@ class Timer extends React.Component {
                 }
             }, 1000)
     
-            return (<>
+            return (
                 <TimerElement type={type} date={date} seconds={seconds} name={name}></TimerElement>
-            </>)
+            )
         }
     }
 

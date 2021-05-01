@@ -5,7 +5,7 @@
     display: inline-block;
     flex-shrink: 0;
     padding: 10px 20px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     margin: 10px;
 }
 

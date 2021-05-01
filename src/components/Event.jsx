@@ -1,4 +1,7 @@
 import React from 'react'
+import Timer from "./TimerElement.jsx"
+
+
 const {useState, useEffect} = React
 
 class Event extends React.Component {
@@ -34,12 +37,15 @@ class Event extends React.Component {
     //     }
     // }
 
-    shouldComponentUpdate() {
+    componentDidUpdate() {
         if(this.props.future && this.state.seconds < 0 && !this.state.ack) {
-            return this.help()
+            this.help()
         }
-        console.log(!(this.props.future && this.state.seconds < 0 && !this.state.ack))
-        return true
+    }
+
+    shouldComponentUpdate(props, state) {
+        console.log(this.props.future)
+        return this.props.future
     }
 
     componentWillUnmount() {
@@ -52,7 +58,7 @@ class Event extends React.Component {
 
         return (
         <div>
-            {Math.floor(seconds / (3600 * 24))} days {Math.floor(seconds / 3600) % 24}:{Math.floor(seconds / 60) % 60}:{seconds % 60}
+            <Timer seconds={seconds}></Timer>
         </div>
         )
     }

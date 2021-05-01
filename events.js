@@ -38,7 +38,7 @@ const events = [
             {name: "Check-in", time: new Date(2021, 4, 1, 18, 0).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 1, 18, 30).getTime()},
             {name: "Phase I ends in", time: new Date(2021, 4, 1, 19, 0).getTime()},
-            {name: "Phase II ends in", time: new Date(2021, 4, 1, 19, 30).getTime()},
+            {name: "Phase II ends in", time: new Date(2021, 4, 1, 20, 30).getTime()},
         ]
     },
     {
@@ -64,7 +64,7 @@ const events = [
             {name: "Check-in", time: new Date(2021, 4, 2, 14, 30).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 2, 15, 0).getTime()},
             {name: "Phase I (Spelling) ends in", time: new Date(2021, 4, 2, 15, 30).getTime()},
-            {name: "Phase II (Spelling) ends in", time: new Date(2021, 4, 2, 16, 0).getTime()},
+            {name: "Phase II (Spelling) ends in", time: new Date(2021, 4, 2, 17, 0).getTime()},
         ]
     },
     {
@@ -73,7 +73,7 @@ const events = [
             {name: "Check-in", time: new Date(2021, 4, 2, 18, 0).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 2, 18, 30).getTime()},
             {name: "Phase I (Spelling) ends in", time: new Date(2021, 4, 2, 19, 0).getTime()},
-            {name: "Phase II (Spelling) ends in", time: new Date(2021, 4, 2, 19, 30).getTime()}
+            {name: "Phase II (Spelling) ends in", time: new Date(2021, 4, 2, 20, 30).getTime()}
         ]
     },
 ]

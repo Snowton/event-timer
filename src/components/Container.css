@@ -44,11 +44,11 @@
 }
 
 .timerContainer.not-at-right:after {
-    opacity: 100%;
+    opacity: 1;
 }
 
 .timerContainer.not-at-left:before {
-    opacity: 100%;
+    opacity: 1;
 }
 
 .app > section > h2 {

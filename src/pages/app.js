@@ -33,7 +33,7 @@ class App extends React.Component {
 
         let divWidth = x.scrollWidth - x.clientWidth;
     
-        if (scroll_pos === 0) {
+        if (scroll_pos <= 0) {
             x.classList.remove("not-at-left")
         }
     
@@ -45,7 +45,7 @@ class App extends React.Component {
             x.classList.add("not-at-right")
         }
     
-        if (scroll_pos === divWidth) {
+        if (scroll_pos >= divWidth) {
             x.classList.remove("not-at-right")
         }
     }

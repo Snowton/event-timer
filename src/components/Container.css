@@ -19,7 +19,6 @@
 }
 
 .timerContainer:after, .timerContainer:before {
-
     transition: 0.3s all;
 }
 
@@ -28,7 +27,7 @@
     overflow-x: hidden;
 }
 
-.timerContainer.not-at-right:after, .timerContainer.not-at-left:before {
+.timerContainer:after, .timerContainer:before {
     content: '';
     height: 100%;
     width: 25px;

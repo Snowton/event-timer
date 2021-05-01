@@ -28,7 +28,8 @@ const events = [
         times: [
             {name: "Check-in", time: new Date(2021, 4, 1, 14, 30).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 1, 15, 0).getTime()},
-            {name: "Ends in", time: new Date(2021, 4, 1, 15, 30).getTime()},
+            {name: "Phase I ends in", time: new Date(2021, 4, 1, 15, 30).getTime()},
+            {name: "Phase II ends in", time: new Date(2021, 4, 1, 16, 00).getTime()},
         ]
     },
     {
@@ -36,7 +37,8 @@ const events = [
         times: [
             {name: "Check-in", time: new Date(2021, 4, 1, 18, 0).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 1, 18, 30).getTime()},
-            {name: "Ends in", time: new Date(2021, 4, 1, 19, 0).getTime()},
+            {name: "Phase I ends in", time: new Date(2021, 4, 1, 19, 0).getTime()},
+            {name: "Phase II ends in", time: new Date(2021, 4, 1, 19, 30).getTime()},
         ]
     },
     {
@@ -52,7 +54,8 @@ const events = [
         times: [
             {name: "Check-in", time: new Date(2021, 4, 2, 12, 30).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 2, 13, 0).getTime()},
-            {name: "Ends in", time: new Date(2021, 4, 2, 13, 30).getTime()},
+            {name: "Phase II ends in", time: new Date(2021, 4, 2, 13, 30).getTime()},
+            {name: "Phase I ends in", time: new Date(2021, 4, 2, 14, 00).getTime()},
         ]
     },
     {
@@ -60,7 +63,8 @@ const events = [
         times: [
             {name: "Check-in", time: new Date(2021, 4, 2, 14, 30).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 2, 15, 0).getTime()},
-            {name: "Ends in", time: new Date(2021, 4, 2, 15, 30).getTime()},
+            {name: "Phase I (Spelling) ends in", time: new Date(2021, 4, 2, 15, 30).getTime()},
+            {name: "Phase II (Spelling) ends in", time: new Date(2021, 4, 2, 16, 0).getTime()},
         ]
     },
     {
@@ -68,7 +72,8 @@ const events = [
         times: [
             {name: "Check-in", time: new Date(2021, 4, 2, 18, 0).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 2, 18, 30).getTime()},
-            {name: "Ends in", time: new Date(2021, 4, 2, 19, 0).getTime()}
+            {name: "Phase I (Spelling) ends in", time: new Date(2021, 4, 2, 19, 0).getTime()},
+            {name: "Phase II (Spelling) ends in", time: new Date(2021, 4, 2, 19, 30).getTime()}
         ]
     },
 ]

@@ -18,7 +18,6 @@ class Timer extends React.Component {
         // console.log(this.state.seconds)
 
         if(status === times.length) {
-            console.log(this.props)
             return <TimerElement type={type} data={times[status - 1]} name={name}></TimerElement>
 
         } else {
@@ -29,7 +28,6 @@ class Timer extends React.Component {
                     this.setState((state) => ({seconds: Math.floor((times[status].time - Date.now()) / 1000)}))
                 } else {
                     this.props.onEnd(id, status)
-                    console.log(id, seconds, times, Math.floor((times[status].time - Date.now()) / 1000))
                 }
             }, 1000)
     
@@ -41,6 +39,9 @@ class Timer extends React.Component {
 
     componentWillUnmount() {
         clearTimeout(this.timeout)
+        this.setState = (state,callback)=>{
+            return;
+        };
     }
 }
 

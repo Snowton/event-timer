@@ -77,7 +77,7 @@ class App extends React.Component {
                 <section className="future">
                     <h2>Upcoming</h2>
                     <div className="scroll-wrapper">
-                        <div className="timerContainer" onload={(x) => this.updateDiv(x)} onScroll={(x) => this.updateDiv(x.target)}>
+                        <div className="timerContainer" onScroll={(x) => this.updateDiv(x.target)}>
                             {future.slice(1).map(event => <Timer key={event.id} type={"future"} event={event} onEnd={this.end}></Timer>)}
                         </div>
                     </div>
@@ -87,7 +87,7 @@ class App extends React.Component {
                 <section className="past">
                     <h2>Past</h2>
                     <div className="scroll-wrapper">
-                        <div className="timerContainer" onload={(x) => this.updateDiv(x)} onScroll={(x) => this.updateDiv(x.target)}>
+                        <div className="timerContainer" onScroll={(x) => this.updateDiv(x.target)}>
                             {past.map(event => <Timer key={event.id} type={"past"} event={event} onEnd={this.end}></Timer>)}
                         </div>
                     </div>

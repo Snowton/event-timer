@@ -6,15 +6,17 @@ import Timer from "../components/Timer.jsx"
 import events from "../../events.js"
 import "../components/Container.css"
 
-events = events.sort((e1, e2) => (e1.date - e2.date))
-events = events.map((element, index) => ({...element, id: index, done: false}))
+let ev = events
+
+ev = ev.sort((e1, e2) => (e1.date - e2.date))
+ev = ev.map((element, index) => ({...element, id: index, done: false}))
 
 class App extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            e: [...events]
+            e: [...ev]
         }
     }
 
@@ -72,7 +74,7 @@ class App extends React.Component {
         return (<Layout>
             <div className="app">
                 <section className="future">
-                    <h2>Future</h2>
+                    <h2>Upcoming</h2>
                     <div className="scroll-wrapper">
                         <div className="timerContainer" onload={(x) => this.updateDiv(x)} onScroll={(x) => this.updateDiv(x.target)}>
                             {future.slice(1).map(event => <Timer key={event.id} type={"future"} event={event} onEnd={this.end}></Timer>)}

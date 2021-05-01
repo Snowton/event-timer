@@ -7,8 +7,8 @@ class TimerElement extends React.Component {
     }
 
     render() {
-        let {name, type, date} = this.props
-        date = new Date(date)
+        let {name, type, data} = this.props
+        const date = new Date(data.time)
 
         // const dateString = date.getHours() + ":" + date.getMinutes() + " " + date.getMonth() + ", " + date.getFullYear()
         const dateString = date.toLocaleString();
@@ -17,7 +17,7 @@ class TimerElement extends React.Component {
         if(type === "past") {
             return (
             <div className="timer past"><h2>{name}</h2>
-            <p>{dateString}</p>
+            <p>Ended: {dateString}</p>
             </div>
             )
         }
@@ -27,7 +27,7 @@ class TimerElement extends React.Component {
         const hour = Math.floor(seconds / 3600) % 24
         let day = Math.floor(seconds / (3600 * 24))
         day = day > 0 ? day + (day > 1 ? " days" : " day") : ""
-        const timestring = `Time left: ${day} ${hour}:${min}:${sec}`
+        const timestring = `${data.name}: ${day} ${hour}:${min}:${sec}`
 
         if(type === "future") {
     

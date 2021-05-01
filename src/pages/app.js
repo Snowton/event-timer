@@ -13,17 +13,17 @@ class App extends React.Component {
 
         let ev = events
         
-        ev = ev.sort((e1, e2) => (e1.date - e2.date))
-        ev = ev.map((element, index) => ({...element, id: index, done: false}))
-        
+        ev = ev.sort((e1, e2) => (e1.times[0].time - e2.times[0].time))
+        ev = ev.map((element, index) => ({...element, id: index, status: 0}))
+
         this.state = {
             e: [...ev]
         }
     }
 
-    end = (id) => {
+    end = (id, st) => {
         this.setState(old => {
-            old.e[id].done = true
+            old.e[id].status = st + 1
             return old
         })
     }
@@ -33,7 +33,7 @@ class App extends React.Component {
 
         let divWidth = x.scrollWidth - x.clientWidth;
     
-        if (scroll_pos == 0) {
+        if (scroll_pos === 0) {
             x.classList.remove("not-at-left")
         }
     
@@ -45,7 +45,7 @@ class App extends React.Component {
             x.classList.add("not-at-right")
         }
     
-        if (scroll_pos == divWidth) {
+        if (scroll_pos === divWidth) {
             x.classList.remove("not-at-right")
         }
     }
@@ -68,8 +68,8 @@ class App extends React.Component {
 
     render() {
         const {e} = this.state
-        const future = e.filter(z => !z.done)
-        const past = e.filter(f => f.done)
+        const future = e.filter(element => element.status < element.times.length)
+        const past = e.filter(element => element.status === element.times.length).reverse()
         const current = future[0]
 
         return (<Layout>

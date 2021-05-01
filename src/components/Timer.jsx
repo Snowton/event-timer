@@ -4,33 +4,37 @@ import TimerElement from "./TimerElement.jsx"
 class Timer extends React.Component {
     constructor(props) {
         super(props)
+
+        const {times, status} = props.event
+
         this.state = {
-            seconds: Math.floor((props.event.date - Date.now()) / 1000),
+            seconds: Math.floor((times[status] ? times[status].time : 0 - Date.now()) / 1000),
         }
     }
 
     render() {
         const {type} = this.props
-        const {done, name, id, date} = this.props.event
+        const {status, name, id, times} = this.props.event
         // console.log(this.state.seconds)
 
-        if(done) {
-            return <TimerElement type={type} date={date} name={name}></TimerElement>
+        if(status === times.length) {
+            console.log(this.props)
+            return <TimerElement type={type} data={times[status - 1]} name={name}></TimerElement>
 
         } else {
             const {seconds} = this.state
     
             this.timeout = setTimeout(() => {
-                if(Math.floor((date - Date.now()) / 1000) > 0) {
-                    this.setState((state) => ({seconds: Math.floor((date - Date.now()) / 1000)}))
+                if(Math.floor((times[status].time - Date.now()) / 1000) > 0) {
+                    this.setState((state) => ({seconds: Math.floor((times[status].time - Date.now()) / 1000)}))
                 } else {
-                    this.props.onEnd(id)
-                    console.log(id, seconds, date, Math.floor((date - Date.now()) / 1000))
+                    this.props.onEnd(id, status)
+                    console.log(id, seconds, times, Math.floor((times[status].time - Date.now()) / 1000))
                 }
             }, 1000)
     
             return (
-                <TimerElement type={type} date={date} seconds={seconds} name={name}></TimerElement>
+                <TimerElement type={type} data={times[status]} seconds={seconds} name={name}></TimerElement>
             )
         }
     }

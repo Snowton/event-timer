@@ -1,39 +1,75 @@
 const events = [
     {
         name: "History Bee",
-        date: new Date(2021, 3, 30, 18, 30).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 3, 30, 18, 30).getTime()},
+            {name: "Starts in", time: new Date(2021, 3, 30, 19, 0).getTime()},
+            {name: "Ends in", time: new Date(2021, 3, 30, 19, 30).getTime()}
+        ]
     },
     {
         name: "Brain Bee",
-        date: new Date(2021, 4, 1, 11, 0).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 1, 11, 0).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 1, 11, 30).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 1, 12, 0).getTime()},
+        ]
     },
     {
         name: "Essay Writing",
-        date: new Date(2021, 4, 1, 12, 15).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 1, 12, 15).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 1, 12, 45).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 1, 13, 15).getTime()},
+        ]
     },
     {
         name: "Vocabulary Bee",
-        date: new Date(2021, 4, 1, 14, 30).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 1, 14, 30).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 1, 15, 0).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 1, 15, 30).getTime()},
+        ]
     },
     {
         name: "Geography Bee",
-        date: new Date(2021, 4, 1, 18, 0).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 1, 18, 0).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 1, 18, 30).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 1, 19, 0).getTime()},
+        ]
     },
     {
         name: "Science Bee",
-        date: new Date(2021, 4, 2, 11, 0).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 2, 11, 0).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 2, 11, 30).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 2, 12, 0).getTime()},
+        ]
     },
     {
         name: "Math Bee",
-        date: new Date(2021, 4, 2, 12, 30).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 2, 12, 30).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 2, 13, 0).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 2, 13, 30).getTime()},
+        ]
     },
     {
         name: "Junior Spelling Bee/Public Speaking",
-        date: new Date(2021, 4, 2, 14, 30).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 2, 14, 30).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 2, 15, 0).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 2, 15, 30).getTime()},
+        ]
     },
     {
         name: "Senior Spelling Bee/Public Speaking",
-        date: new Date(2021, 4, 2, 18, 0).getTime()
+        times: [
+            {name: "Check-in", time: new Date(2021, 4, 2, 18, 0).getTime()},
+            {name: "Starts in", time: new Date(2021, 4, 2, 18, 30).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 2, 19, 0).getTime()}
+        ]
     },
 ]
 

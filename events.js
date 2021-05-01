@@ -29,7 +29,7 @@ const events = [
             {name: "Check-in", time: new Date(2021, 4, 1, 14, 30).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 1, 15, 0).getTime()},
             {name: "Phase I ends in", time: new Date(2021, 4, 1, 15, 30).getTime()},
-            {name: "Phase II ends in", time: new Date(2021, 4, 1, 18, 0).getTime()},
+            {name: "Phase II ends in", time: new Date(2021, 4, 1, 17, 0).getTime()},
         ]
     },
     {

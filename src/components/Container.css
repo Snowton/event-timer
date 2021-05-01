@@ -18,6 +18,11 @@
     flex-flow: row nowrap;
 }
 
+.timerContainer:after, .timerContainer:before {
+
+    transition: 0.3s all;
+}
+
 .scroll-wrapper {
     position: relative;
     overflow-x: hidden;

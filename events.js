@@ -20,7 +20,7 @@ const events = [
         times: [
             {name: "Check-in", time: new Date(2021, 4, 1, 12, 15).getTime()},
             {name: "Starts in", time: new Date(2021, 4, 1, 12, 45).getTime()},
-            {name: "Ends in", time: new Date(2021, 4, 1, 13, 15).getTime()},
+            {name: "Ends in", time: new Date(2021, 4, 1, 13, 45).getTime()},
         ]
     },
     {
